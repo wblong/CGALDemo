@@ -7,7 +7,7 @@
 - 操作predicate(位置，距离和中点)
 
 ## Code
-``` c++
+``` cpp
 #include <iostream>
 #include <CGAL/Simple_cartesian.h>
 typedef CGAL::Simple_cartesian<double> Kernel;
