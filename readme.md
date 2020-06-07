@@ -14,3 +14,5 @@ python template.py test
 2. [浮点几何运算的问题](FloatCompute/readme.md)
 
 3. [准确断言和准确构建](exact/readme.md)
+
+4. [点集的凸包(一)](array_convex_hull_2/readme.md)

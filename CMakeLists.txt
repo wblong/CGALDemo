@@ -6,4 +6,4 @@ include(${CGAL_USE_FILE})
 add_subdirectory(HelloWorld)
 add_subdirectory(FloatCompute)
 add_subdirectory(exact)
-
+add_subdirectory(array_convex_hull_2) 
