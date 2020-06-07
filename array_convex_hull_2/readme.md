@@ -78,4 +78,68 @@ vector示例
 2. [tutorial_hello_world](https://doc.cgal.org/latest/Manual/tutorial_hello_world.html)
 
 
+## 插曲
+
+`back_inserter`用于在末尾插入元素。
+实现方法是构造一个迭代器，这个迭代器可以在容器末尾添加元素。
+这个迭代器是以插入（`insert`）方式而非覆盖（`overwrite`）方式运作的。
+
+可以使用`back_inserter`的容器是有`push_back`成员函数的容器，比如`vector`, `deque` 和 `list`等。
+
+#### 在末尾添加一个元素
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+
+
+int main()
+{
+    std::vector<int> v1{ 1, 2, 3, 4, 5, 6 };
+
+    *(std::back_inserter(v1)) = 10;
+
+    std::cout << "v1:   ";
+    for (int i : v1) {
+        std::cout << i << "\t";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
+结果：
+```
+v1:   1    2       3       4       5       6       10
+```
+#### 拷贝v2到v1的末尾
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+
+int main()
+{
+    std::vector<int> v1{ 1, 2, 3, 4, 5, 6};
+    std::vector<int> v2{ 10, 20, 30, 40, 50, 60};
+
+    std::copy(v2.begin(), v2.end(), std::back_inserter(v1));
+
+    std::cout << "v1:   ";
+    for (int i : v1) {
+        std::cout << i << "\t";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
+
+结果：
+```
+v1:   1 2       3       4       5       6       10      20      30      40      50      60
+```
 
