@@ -38,7 +38,7 @@ collinear
 如果需要使小数被全精度解析，可以使用精确断言和精确构建的`CGAL kernel`。 
 
 ## 链接
-[HelloWorld](https://github.com/wblong/CGALDemo/tree/master/FloatCompute)
+[FloatCompute](https://github.com/wblong/CGALDemo/tree/master/FloatCompute)
 
 ## Reference
 
