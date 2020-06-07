@@ -1,6 +1,9 @@
 # 点集的凸包（一）
 
 ## Code 
+
+利用数组进行输入输出
+
 ```cpp
 #include <iostream>
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
@@ -20,6 +23,33 @@ int main()
   return 0;
 }
 ```
+标准库中的vector类来进行输入和输出
+```cpp
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/convex_hull_2.h>
+ 
+#include <vector>
+ 
+typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
+typedef K::Point_2 Point_2;
+typedef std::vector<Point_2> Points;
+ 
+int main()
+{
+Points points, result;
+points.push_back(Point_2(0,0));
+points.push_back(Point_2(10,0));
+points.push_back(Point_2(10,10));
+points.push_back(Point_2(6,5));
+points.push_back(Point_2(4,1));
+ 
+ 
+CGAL::convex_hull_2( points.begin(), points.end(), std::back_inserter(result) );
+std::cout << result.size() << " points on the convex hull" << std::endl;
+return 0;
+}
+
+```
 ## Result
 
 ```
@@ -27,6 +57,11 @@ int main()
 0 0
 10 0
 10 10
+```
+vector示例
+
+```
+3 points on the convex hull
 ```
 
 ## Expalnation
