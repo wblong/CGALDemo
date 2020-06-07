@@ -1,5 +1,12 @@
 # CGAL Demo
 
+## 使用模板创建示例项目
+
+``` python
+python template.py test
+
+```
+
 ## HelloWorld
 
 1. [点和线段](HelloWorld/readme.md)

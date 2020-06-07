@@ -35,7 +35,7 @@ if len(sys.argv)>1:
 
     # 追加CMakeLists add_subdirectory
     cmakefile=os.path.join(pwd,"CMakeLists.txt")
-    strcontent="add_subdirectory({})".format(name)
+    strcontent="add_subdirectory({}) \n".format(name)
     with open(cmakefile,'a') as fd:
         fd.write(strcontent)
 else:
