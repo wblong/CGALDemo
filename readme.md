@@ -19,3 +19,7 @@ python template.py test
    
 5. [点集的凸包（二）](convex_hull_yz/readme.md)
 
+## Delaunay2D
+
+1. [简单Delaunay2D 三角剖分](Delaunay2D/readme.md)
+
