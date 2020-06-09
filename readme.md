@@ -22,4 +22,6 @@ python template.py test
 ## Delaunay2D
 
 1. [简单Delaunay2D 三角剖分](Delaunay2D/readme.md)
+   
+2. [不同方式遍历方式遍历三角形](for_loop_2/readme.md)
 
