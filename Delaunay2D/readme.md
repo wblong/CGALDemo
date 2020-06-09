@@ -286,7 +286,7 @@ triangle: 26
 261 -241
 
 ```
-![result](Delaunay2D.PNG)
+![result](https://raw.githubusercontent.com/wblong/CGALDemo/master/Delaunay2D/Delaunay2D.PNG)
 ## Explanation
 
 点集的简单三角剖分以及顶点和三角形的遍历。
