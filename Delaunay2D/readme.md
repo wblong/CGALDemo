@@ -7,7 +7,7 @@
 #include <CGAL/Delaunay_triangulation_2.h>
 #include <fstream>
 #include <CGAL/IO/File_poly.h>
-
+#include <CGAL/draw_triangulation_2.h>
 typedef CGAL::Exact_predicates_exact_constructions_kernel K;
 typedef CGAL::Delaunay_triangulation_2<K> Delaunay;
 typedef K::Point_2  Point;
@@ -47,6 +47,7 @@ int main(){
 		std::cout << "-------------------------------------------------------------------" << std::endl;
 		++i;
     }  
+	CGAL::draw(dt);
     return 0;
 }
 
@@ -79,7 +80,18 @@ void write_triangle_poly_file(const Delaunay& t, std::ostream &f) {
 	f << std::endl;
 }
 ```
+## CMakeLists.txt
+```
+cmake_minimum_required(VERSION 3.3)
+project( Delaunay2D )
+find_package(CGAL COMPONENTS Qt5)
+add_definitions(-DCGAL_USE_BASIC_VIEWER)
+#add_executable(Delaunay2D Delaunay2D.cpp)
+#target_link_libraries(Delaunay2D ${CGAL_LIBRARIES})
+create_single_source_cgal_program("Delaunay2D.cpp")
+target_link_libraries(Delaunay2D PUBLIC CGAL::CGAL_Qt5)
 
+```
 ## Result
 
 ```
@@ -274,6 +286,7 @@ triangle: 26
 261 -241
 
 ```
+![result](Delaunay2D.PNG)
 ## Explanation
 
 点集的简单三角剖分以及顶点和三角形的遍历。

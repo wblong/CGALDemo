@@ -2,7 +2,7 @@
 #include <CGAL/Delaunay_triangulation_2.h>
 #include <fstream>
 #include <CGAL/IO/File_poly.h>
-
+#include <CGAL/draw_triangulation_2.h>
 typedef CGAL::Exact_predicates_exact_constructions_kernel K;
 typedef CGAL::Delaunay_triangulation_2<K> Delaunay;
 typedef K::Point_2  Point;
@@ -42,6 +42,7 @@ int main(){
 		std::cout << "-------------------------------------------------------------------" << std::endl;
 		++i;
     }  
+	CGAL::draw(dt);
     return 0;
 }
 
